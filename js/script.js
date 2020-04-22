@@ -103,7 +103,7 @@ function calculate()
 
    
 
-   gpa = parseInt((g1 / c1).toFixed(3));
+   gpa = (g1 / c1).toFixed(3);
     console.log(gpa);
 
  };
