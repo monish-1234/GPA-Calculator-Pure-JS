@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>Tech Maniac</title>
+
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="./css/pace.css">
+<script src="./js/pace.min.js"></script>
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
+<link rel="stylesheet" href="./css/style.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+  $(document).ready(function(){
+  
+      var counter = 2;
+  
+      $("#addButton").click(function () {
+  
+    if(counter>10){
+              alert("Only 10 textboxes allow");
+              return false;
+    }
+  
+    var newTextBoxDiv = $(document.createElement('div'))
+         .attr("id", 'TextBoxDiv' + counter);
+  
+    newTextBoxDiv.after().html('<label>Grade Sub #'+ counter + ' : </label>' +
+          '<input type="text" name="textbox' + counter +
+          '" id="grade' + counter + '" value="" > <label>Credits Sub#'+ counter + ' : </label>' +
+          '<input type="text" name="textbox' + counter +
+          '" id="credit' + counter + '" value="" >');
+  
+    newTextBoxDiv.appendTo("#TextBoxesGroup");
+  
+  
+    counter++;
+       });
+  
+       $("#removeButton").click(function () {
+    if(counter==1){
+            alert("No more fields to remove");
+            return false;
+         }
+  
+    counter--;
+  
+          $("#TextBoxDiv" + counter).remove();
+  
+       });
+  
+       $("#getButtonValue").click(function () {
+  
+    var msg = '';
+    for(i=1; i<counter; i++){
+         msg += "\n Textbox #" + i + " : " + $('#credit' + i).val();
+    }
+          alert(msg);
+       });
+    });
+  </script>
+</head>
+<body>
+<div class="bg"></div>
+
+<div class="text middle " data-text="GPA | Tech Maniac">
+  GPA | Tech Maniac
+</div>
+    <div class="cont">
+          This GPA Calculator is Designed for SRM IST. But it works just fine for other colleges too 😉 <br>
+                      
+            <div id='TextBoxesGroup'>
+              <div id="TextBoxDiv1">
+                <label>Grade Sub 1 : </label><input type='textbox' id='grade1' >
+                <label>Credits Sub 1 : </label><input type='textbox' id='credit1' >
+
+              </div>
+            </div>
+            <input type='button' value='Add Button' id='addButton'>
+            <input type='button' value='Remove Button' id='removeButton'>
+            <input type='button' value='Get TextBox Value' id='getButtonValue'>
+            
+           <br> <br> By Using these services you agree to our<a href="https://proxy.techmaniac.in/terms.html"> <u><i>Terms and Conditions</i></u> </a> and <a href="https://proxy.techmaniac.in/privacy.html" > <u><i>Privacy Policy</i></u> </a>
+
+    </div>
+
+</body>
