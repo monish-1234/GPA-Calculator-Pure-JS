@@ -13,6 +13,7 @@
   background-size: cover;
 }
 
+
 .cont{
     position: absolute;
     border-radius: 15px 50px;
@@ -91,8 +92,40 @@
     }
   }
 
-    
-  @media (max-width: 768px){
+  .iphonebug{
+    width:150px
+  }
+
+  input{
+    -webkit-appearance: none;
+  }
+
+  .iphonesucks {
+   padding:0 40px;
+   line-height:53px;
+   font-size:.875rem;
+  }
+
+  @media (max-width: 690px) { 
+    .iphonesucks {
+      padding: 0 10px;
+      line-height: 33px;
+      font-size: .875rem;
+      -webkit-appearance: none;
+      border-radius: 0;
+  }
+  input{
+    -webkit-appearance: none;
+  }
+  .iphonebug{
+    width:90px
+  }
+  .text{
+    font-size: 10px;
+}
+}
+
+  @media (max-width: 828px){
     .bg{
         background-image: url('../img/mobilebg.jpg');
     }

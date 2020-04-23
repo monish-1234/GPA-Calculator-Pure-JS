@@ -17,7 +17,7 @@ $(document).ready(function(){
 
         newTextBoxDiv.after().html('<br><div id="TextBoxDiv'+counter+'">'+
                                 ' <div class="uk-form-controls">'+
-                        '<label class="uk-form-label">Sub #'+counter+' : </label><select class="uk-select uk-form-width-small" required id="grade'+counter+'">'+
+                        '<label class="uk-form-label">Sub #'+counter+' : </label><select class="uk-select iphonebug" required id="grade'+counter+'">'+
                         '<option value="" selected hidden disabled >Select Grade</option>'+
                         '<option value="10">O</option>'+
                         '<option value="9">A+</option>'+
@@ -28,7 +28,7 @@ $(document).ready(function(){
                         '<option value="4">P</option>'+                
                         '</select>'+ 
                         '&nbsp; &nbsp; &nbsp;'+
-                        '<select class="uk-select uk-form-width-small" required id="credit'+counter+'">'+
+                        '<select class="uk-select iphonebug" required id="credit'+counter+'">'+
                         '<option value="" selected hidden disabled>Select Credit</option>'+
                         '<option value="1">1</option>'+
                         '<option value="2">2</option>'+
@@ -99,3 +99,4 @@ function calculate()
     return false
 
  };
+
