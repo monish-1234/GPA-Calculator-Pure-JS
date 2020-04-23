@@ -95,30 +95,6 @@ function calculate()
     
     }
 
-   for ( i = 1; i<counter; i++ ){
-        if (grade[i]=="O"){
-        grade[i]=10;
-        }
-        if (grade[i]=="A+"){
-                grade[i]=9;
-        }
-        if (grade[i]=="A"){
-                grade[i]=8;
-        }
-        if (grade[i]=="B+"){
-                grade[i]=7;
-        }
-        if (grade[i]=="B"){
-                grade[i]=6;
-        }
-        if (grade[i]=="C"){
-                grade[i]=5;
-        }
-        if (grade[i]=="P"){
-                grade[i]=4;
-        }
-   }
-
    for (i = 1; i<counter; i++ ){
     g1+=parseInt(grade[i]*credit[i]);
    }
