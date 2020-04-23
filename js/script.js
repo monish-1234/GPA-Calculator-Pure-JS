@@ -15,8 +15,9 @@ var newTextBoxDiv = $(document.createElement('div'))
 
 newTextBoxDiv.after().html('<br><div id="TextBoxDiv'+counter+'">'+
                         ' <div class="uk-form-controls">'+
-                  '<label class="uk-form-label"> Grade Sub #'+counter+' : </label><select class="uk-select uk-form-width-small" id="grade'+counter+'">'+
-                      '<option value="10">O</option>'+
+                  '<label class="uk-form-label">Sub #'+counter+' : </label><select class="uk-select uk-form-width-small" required id="grade'+counter+'">'+
+                    '<option value="" selected hidden disabled >Select Grade</option>'+
+                    '<option value="10">O</option>'+
                       '<option value="9">A+</option>'+
                       '<option value="8">A</option>'+
                       '<option value="7">B+</option>'+
@@ -25,8 +26,8 @@ newTextBoxDiv.after().html('<br><div id="TextBoxDiv'+counter+'">'+
                       '<option value="4">P</option>'+                
                     '</select>'+ 
                       '&nbsp; &nbsp; &nbsp;'+
-                   '<label class="uk-form-label"> Credits Sub #'+counter+' : </label>'+
-                   '<select class="uk-select uk-form-width-small" id="credit'+counter+'">'+
+                   '<select class="uk-select uk-form-width-small" required id="credit'+counter+'">'+
+                   '<option value="" selected hidden disabled>Select Credit</option>'+
                     '<option value="1">1</option>'+
                     '<option value="2">2</option>'+
                     '<option value="3">3</option>'+
