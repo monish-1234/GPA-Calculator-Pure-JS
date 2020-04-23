@@ -1,6 +1,8 @@
 var counter = 2;
 var gpa;
 var cgpa;
+var dumb = 1;
+
 $(document).ready(function(){
 
     $("#addButton").click(function () {
@@ -46,7 +48,13 @@ counter++;
  });
 
  $("#removeButton").click(function () {
-if(counter==1){
+if(counter==2){
+        var sound=[];
+        for (var a=1;a<=7;a++){
+                sound[a]=new Audio("./Rick/"+a+".mp3");
+        }
+        sound[dumb].play();
+        dumb++;
       alert("No more fields to remove");
       return false;
    }
