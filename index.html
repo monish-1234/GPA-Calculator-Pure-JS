@@ -24,19 +24,43 @@
 </div>
     <div class="cont">
           This GPA Calculator is Designed for SRM IST. But it works just fine for other colleges too 😉 <br>
-          <form name="gpa">
     
             <div id='TextBoxesGroup'>
               <div id="TextBoxDiv1">
-                <label> Grade Sub #1 : </label><input type='text' id='grade1' >
-                <label> Credits Sub #1 : </label><input type='text' id='credit1' >
-
-              </div>
-            </div>
-            <input type='button' value='Add Button' id='addButton'>
-            <input type='button' value='Remove Button' id='removeButton'>
-            <input type='button' value='Get TextBox Value' onclick='calculate()'>
+                <div class="uk-form-controls"><br>
+                  <form onsubmit="calculate()" >
+                
+                  <label class="uk-form-label"> Grade Sub #1 : </label>
+                  <select class="uk-select uk-form-width-small" required id="grade1">
+                    <option value="" selected hidden disabled >Select Grade</option>
+                      <option value="10">O</option>
+                      <option value="9">A+</option>
+                      <option value="8">A</option>
+                      <option value="7">B+</option>
+                      <option value="6">B</option>
+                      <option value="5">C</option>
+                      <option value="4">P</option>                 
+                    </select> 
+                      &nbsp; &nbsp; &nbsp;
+                   <label class="uk-form-label"> Credits Sub #1 : </label>
+                   <select class="uk-select uk-form-width-small" required id="credit1">
+                    <option value="" selected hidden disabled>Select Credit</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>                 
+                </select> 
+              <br>
+            <input type='button' class="uk-button-primary uk-button-large" value='Add a Subject' id='addButton'>
+            <input type='button' class="uk-button-primary uk-button-large" value='Remove a Subject' id='removeButton'><br><br>
+            <button type="submit" class="uk-button-danger uk-button-large" value='' >Get TextBox Value</button> 
           </form>
+        </div>
+      </div>
+    </div>
          
            <br> <br> By Using these services you agree to our<a href="https://proxy.techmaniac.in/terms.html"> <u><i>Terms and Conditions</i></u> </a> and <a href="https://proxy.techmaniac.in/privacy.html" > <u><i>Privacy Policy</i></u> </a>
 

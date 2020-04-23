@@ -13,11 +13,30 @@ if(counter>15){
 var newTextBoxDiv = $(document.createElement('div'))
    .attr("id", 'TextBoxDiv' + counter);
 
-newTextBoxDiv.after().html('<label>Grade Sub #'+ counter + ' : </label>' +
-    '<input type="text" name="textbox' + counter +
-    '" id="grade' + counter + '" value="" > <label>Credits Sub#'+ counter + ' : </label>' +
-    '<input type="text" name="textbox' + counter +
-    '" id="credit' + counter + '" value="" >');
+newTextBoxDiv.after().html('<br><div id="TextBoxDiv'+counter+'">'+
+                        ' <div class="uk-form-controls">'+
+                  '<label class="uk-form-label"> Grade Sub #'+counter+' : </label><select class="uk-select uk-form-width-small" id="grade'+counter+'">'+
+                      '<option value="10">O</option>'+
+                      '<option value="9">A+</option>'+
+                      '<option value="8">A</option>'+
+                      '<option value="7">B+</option>'+
+                      '<option value="6">B</option>'+
+                      '<option value="5">C</option>'+
+                      '<option value="4">P</option>'+                
+                    '</select>'+ 
+                      '&nbsp; &nbsp; &nbsp;'+
+                   '<label class="uk-form-label"> Credits Sub #'+counter+' : </label>'+
+                   '<select class="uk-select uk-form-width-small" id="credit'+counter+'">'+
+                    '<option value="1">1</option>'+
+                    '<option value="2">2</option>'+
+                    '<option value="3">3</option>'+
+                    '<option value="4">4</option>'+
+                    '<option value="5">5</option>'+
+                    '<option value="6">6</option>'+
+                    '<option value="7">7</option>'+                 
+                '</select>'+ 
+              '</div>'+
+              '</div>');
 
 newTextBoxDiv.appendTo("#TextBoxesGroup");
 
@@ -89,19 +108,14 @@ function calculate()
         if (grade[i]=="P"){
                 grade[i]=4;
         }
-        console.log(grade[i]);
    }
 
    for (i = 1; i<counter; i++ ){
     g1+=parseInt(grade[i]*credit[i]);
-    console.log(g1);
    }
    for (i = 1; i<counter; i++ ){
     c1+=parseInt(credit[i]);
-    console.log(c1);
    }
-
-   
 
    gpa = (g1 / c1).toFixed(3);
     console.log(gpa);

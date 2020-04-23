@@ -30,7 +30,9 @@
 
 }
 
-
+.uk-form-label{
+  color: white;
+}
 .middle{
     position: absolute;
     top: 7%;
@@ -95,7 +97,7 @@
         background-image: url('../img/mobilebg.jpg');
     }
     .cont{
-      width: 85%;
+      width: 90%;
     }
     .text{
         font-size: 15px;
