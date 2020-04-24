@@ -72,8 +72,6 @@ counter--;
 
 function calculate()
  {
-    var grade = [];
-    var credit = [];
     var g1 = 0;
     var c1 = 0;
     var i;
@@ -81,25 +79,25 @@ function calculate()
     
    for (i = 1; i<counter; i++ )
    {
-     grade[i] = document.getElementById("grade"+i).value;
-     credit[i] = document.getElementById("credit"+i).value;
-    
+     g1+=parseInt(document.getElementById("grade"+i).value*document.getElementById("credit"+i).value);
+     c1+=parseInt(document.getElementById("credit"+i).value);
     }
-
-   for (i = 1; i<counter; i++ ){
-    g1+=parseInt(grade[i]*credit[i]);
-   }
-   for (i = 1; i<counter; i++ ){
-    c1+=parseInt(credit[i]);
-   }
-
-   gpa = (g1 / c1).toFixed(3);
+    cg=(parseFloat(document.getElementById('cgpa').value));
+    gpa = (g1 / c1).toFixed(3);
+   
    if (gpa=="NaN"){
         document.getElementById("output").value="Your GPA is.... ";
    }
    else{
    document.getElementById("output").value="Your GPA is "+gpa;
-    console.log(gpa);
+  
+   if(cg>0){
+          cgpa = ((parseFloat(gpa)+parseFloat(cg))/2).toFixed(3);
+            
+        document.getElementById("output").value="Your CGPA is "+cgpa;
+        }
+    console.log("GPA - "+gpa);
+    console.log("CGPA - "+cgpa);
     return false
    }
 
