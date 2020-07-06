@@ -86,15 +86,14 @@ function calculate()
     gpa = (g1 / c1).toFixed(3);
    
    if (gpa=="NaN"){
-        document.getElementById("output").value="Your GPA is.... ";
+        document.getElementById("gpaoutput").value="Your GPA is.... ";
    }
    else{
-   document.getElementById("output").value="Your GPA is "+gpa;
+   document.getElementById("gpaoutput").value="Your GPA is "+gpa;
   
    if(cg>0){
           cgpa = ((parseFloat(gpa)+parseFloat(cg))/2).toFixed(3);
-            
-        document.getElementById("output").value="Your CGPA is "+cgpa;
+          document.getElementById("cgpaoutput").value="Your CGPA is "+cgpa;
         }
     console.log("GPA - "+gpa);
     console.log("CGPA - "+cgpa);
