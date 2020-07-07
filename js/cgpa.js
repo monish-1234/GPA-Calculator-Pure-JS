@@ -64,13 +64,10 @@ function calculate()
    {
      g1+=parseFloat(document.getElementById("gpa"+i).value*document.getElementById("credit"+i).value);
      c1+=parseInt(document.getElementById("credit"+i).value);
-     console.log(g1);
-    console.log(c1);
+
     }
-    console.log(g1);
-    console.log(c1);
-    cgpa = (g1 / c1).toFixed(3);
-   console.log(cgpa);
+   cgpa = (g1 / c1).toFixed(3);
+
    
    document.getElementById("cgpaoutput").value="Your CGPA is "+cgpa;
   
