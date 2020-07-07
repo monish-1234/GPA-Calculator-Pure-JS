@@ -82,7 +82,6 @@ function calculate()
      g1+=parseInt(document.getElementById("grade"+i).value*document.getElementById("credit"+i).value);
      c1+=parseInt(document.getElementById("credit"+i).value);
     }
-    cg=(parseFloat(document.getElementById('cgpa').value));
     gpa = (g1 / c1).toFixed(3);
    
    if (gpa=="NaN"){
@@ -91,12 +90,7 @@ function calculate()
    else{
    document.getElementById("gpaoutput").value="Your GPA is "+gpa;
   
-   if(cg>0){
-          cgpa = ((parseFloat(gpa)+parseFloat(cg))/2).toFixed(3);
-          document.getElementById("cgpaoutput").value="Your CGPA is "+cgpa;
-        }
     console.log("GPA - "+gpa);
-    console.log("CGPA - "+cgpa);
     return false
    }
 
