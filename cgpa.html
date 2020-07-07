@@ -38,8 +38,8 @@
               <div id="TextBoxDiv1">
                 <div class="uk-form-controls"><br>
                     <label class="uk-form-label">Sem #1 : </label>
-                    <input class="uk-input uk-form-success formwi" type="number" step="any" min="1" max="10" id="gpa1" placeholder="Enter GPA" >
-                    <input class="uk-input uk-form-success formwi" type="number" step="any" min="1" max="50" id="credit1" placeholder="Enter Credits" >
+                    <input required class="uk-input uk-form-success formwi" type="number" step="any" min="1" max="10" id="gpa1" placeholder="Enter GPA" >
+                    <input required class="uk-input uk-form-success formwi" type="number" step="any" min="1" max="50" id="credit1" placeholder="Enter Total Credits" >
               <br>
                 
           
@@ -56,7 +56,9 @@
 
             </div>
 
-  </form>  
+  </form>  <br>
+  <button type="submit" class="uk-button-secondary uk-button-small " onclick="openGPA()" >Click here to Calculate GPA </button> <br><br>
+
   <iframe src="https://open.spotify.com/embed/playlist/3ysTY0iszVcOvZvzLvS4Ef" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
            <br> <br> <br>
            <a class="github-button" href="https://github.com/monish-1234/GPA-Calculator-Pure-JS" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-size="large" aria-label="Github Repo Link">Open Sourced on Github</a>
@@ -69,6 +71,10 @@
 
 
     </div>
-
+    <script>
+      function openGPA() {
+        window.open("./index.html", '_blank',);
+            }
+      </script>
 </body>
 </html>
