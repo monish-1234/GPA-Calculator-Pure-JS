@@ -16,7 +16,7 @@ $(document).ready(function(){
         .attr("id", 'TextBoxDiv' + counter);
 
         newTextBoxDiv.after().html('<br><div id="TextBoxDiv'+counter+'">'+
-                                ' <div class="uk-form-controls">'+
+                                '<div class="uk-form-controls">'+
                         '<label class="uk-form-label">Sub #'+counter+' : </label><select class="uk-select iphonebug iphonesize" required id="grade'+counter+'">'+
                         '<option value="" selected hidden disabled >Select Grade</option>'+
                         '<option value="10">O</option>'+
@@ -27,7 +27,7 @@ $(document).ready(function(){
                         '<option value="5">C</option>'+
                         '<option value="4">P</option>'+                
                         '</select>'+ 
-                        '&nbsp; &nbsp; &nbsp;'+
+                        '&nbsp;'+
                         '<select class="uk-select iphonebug iphonesize" required id="credit'+counter+'">'+
                         '<option value="" selected hidden disabled>Select Credit</option>'+
                         '<option value="1">1</option>'+
