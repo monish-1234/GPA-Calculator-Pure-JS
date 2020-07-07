@@ -19,7 +19,7 @@ $(document).ready(function(){
         '<div class="uk-form-controls"><br>'+
             '<label class="uk-form-label">Sem #'+counter+': </label>'+
             '<input required class="uk-input uk-form-success formwi" type="number" step="any" min="1" max="10" id="gpa'+counter+'" placeholder="Enter GPA" > '+
-            '<input required class="uk-input uk-form-success formwi" type="number" step="any" min="1" max="50" id="credit'+counter+'" placeholder="Enter Credits" >'+
+            '<input required class="uk-input uk-form-success formwi" type="number" step="any" min="1" max="50" id="credit'+counter+'" placeholder="Enter Total Credits" >'+
             '<br>'+
             '</div>'+
             '</div>');
