@@ -1,4 +1,4 @@
-# SRM GPA Calculator
+# SRM GPA/CGPA Calculator
 
    This GPA Calculator is Designed for SRM IST using pure Javascript , HTML5 and CSS.
 
